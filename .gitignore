@@ -1,0 +1,69 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+.env.bak
+.envrc
+.python-version
+
+# Distribution / packaging
+.Python
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+wheels/
+
+# Unit test / coverage reports
+.pytest_cache/
+.coverage*
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+
+# Type checkers / linters
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# dotenv (secrets)
+.env
+.env.local
+.env.*.local
+
+# FastAPI / Uvicorn
+*.sqlite3
+
+# Node (if present for tooling)
+node_modules/
+.pnp.cjs
+.pnp.loader.mjs
+.pnp.data.json
+
+# Misc
+*.bak
+*.tmp
+~$*

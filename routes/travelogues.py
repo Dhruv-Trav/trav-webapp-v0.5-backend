@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from models.travoulage import Itinerary
 from controllers.travelogues import create_itinerary, get_all_itineraries
 
-router = APIRouter(prefix="/itineraries", tags=["Itineraries"])
+router = APIRouter(prefix="/travoulage", tags=["Travoulage"])
 
 @router.post("/")
 async def create(data: Itinerary):
