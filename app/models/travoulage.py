@@ -195,7 +195,7 @@ class TravelogueFilters(BaseModel):
     tags: Optional[List[str]] = None
 
 class Travelogue(BaseModel):
-    id: str
+    id: Optional[str] = None
     slug: str
     title: str
     subtitle: Optional[str] = None
