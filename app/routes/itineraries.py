@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from models.itineraries import TripPlan
-from controllers.itineraries import (
+from app.models.itineraries import TripPlan
+from app.controllers.itineraries import (
     create_trip_plan,
     get_all_trip_plans,
     get_trip_plan,

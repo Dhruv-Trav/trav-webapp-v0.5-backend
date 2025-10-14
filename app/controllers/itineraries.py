@@ -1,7 +1,7 @@
 from fastapi.encoders import jsonable_encoder
 from bson import ObjectId
-from config import db
-from models.itineraries import TripPlan
+from app.config import db
+from app.models.itineraries import TripPlan
 
 collection = db["trip_plans"]
 
