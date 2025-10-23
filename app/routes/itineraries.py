@@ -1,32 +1,34 @@
 from fastapi import APIRouter
-from app.models.itineraries import TripPlan
+from app.models.itineraries import Itinerary
 from app.controllers.itineraries import (
-    create_trip_plan,
-    get_all_trip_plans,
-    get_trip_plan,
-    update_trip_plan,
-    delete_trip_plan,
+    create_itinerary,
+    get_all_itineraries,
+    get_itinerary,
+    update_itinerary,
+    delete_itinerary,
 )
 
 # Use a distinct prefix to avoid clashing with existing /itineraries routes
-router = APIRouter(prefix="/itineraries-v2", tags=["Itineraries v2"])
+router = APIRouter(prefix="/itineraries", tags=["Itineraries v2"])
 
+@router.post("")
 @router.post("/")
-async def create(data: TripPlan):
-    return await create_trip_plan(data)
+async def create(data: Itinerary):
+    return await create_itinerary(data)
 
+@router.get("")
 @router.get("/")
 async def get_all():
-    return await get_all_trip_plans()
+    return await get_all_itineraries()
 
 @router.get("/{id}")
 async def get_one(id: str):
-    return await get_trip_plan(id)
+    return await get_itinerary(id)
 
 @router.put("/{id}")
-async def update(id: str, data: TripPlan):
-    return await update_trip_plan(id, data)
+async def update(id: str, data: dict):
+    return await update_itinerary(id, data)
 
 @router.delete("/{id}")
 async def delete(id: str):
-    return await delete_trip_plan(id)
+    return await delete_itinerary(id)
